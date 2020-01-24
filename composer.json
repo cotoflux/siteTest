@@ -1,7 +1,7 @@
 {
     "name":"cotoflux/api_work",
     "type": "library",
-    "description": "Checks the login in a url and returns the tocken",
+    "description": "Checks the login in a url and returns the token",
     "keywords": ["cotoflux", "token", "url", "package"],
     "homepage": "https://github.com/cotoflux/api_work",
     "license": "MIT",

@@ -5,7 +5,6 @@ use App\SiteAPIClient;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
-include("../guarda/information.php");
 
 
 class SiteAPIClientTest extends TestCase
@@ -16,14 +15,14 @@ class SiteAPIClientTest extends TestCase
         $respuestaClasse = new SiteAPIClient();
         //$expectedUser = 'test@test.test';
         //dd($respuestaClasse->auth_email);
-        $this->assertEquals('EMAIL', $respuestaClasse->auth_email);
+        $this->assertEquals('test@test.test', $respuestaClasse->auth_email);
 
     }
 
     public function test_CorrectPassword()
     {
         $respuestaClasse = new SiteAPIClient();
-        $this->assertEquals('PASSWORD', $respuestaClasse->auth_pass);
+        $this->assertEquals('test1234', $respuestaClasse->auth_pass);
     }
 
     public function test_ATokenExists()

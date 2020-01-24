@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
 use Symfony\Component\VarDumper;
 
-include("../guarda/information.php");
+
 
 Class SiteAPIClient
 {
@@ -22,8 +22,8 @@ Class SiteAPIClient
 
     public function __construct()
     {
-        $this->auth_pass = 'PASSWORD';
-        $this->auth_email = 'EMAIL';
+        $this->auth_pass = 'test1234';
+        $this->auth_email = 'test@test.test';
         $this->client = new Client();
         $this->prepare_access_token();
         
