@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Checks the login in a url and returns the tocken",
     "keywords": ["cotoflux", "token", "url", "package"],
-    "homepage": "https://github.com/cotoflux",
+    "homepage": "https://github.com/cotoflux/api_work",
     "license": "MIT",
 
     "authors": [{
@@ -14,8 +14,7 @@
     }],
     
     "require": {
-        "guzzlehttp/guzzle": "^6.5",
-        "dwolla/dwolla-php": "^2.1"
+        "guzzlehttp/guzzle": "^6.5"
         
     },
 
@@ -31,5 +30,3 @@
     }
 
 }
-
-
