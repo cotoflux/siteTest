@@ -1,9 +1,17 @@
 {
-    "name": "cotoflux/request",
+    "name": "cotoflux/apiWork",
     "authors": [{
         "name": "Nuria Puig",
         "email": "cotoflux@gmail.com"
     }],
+
+    "version": "1.º.º",
+
+    "description": "Checks the login in a url and returns the tocken",
+
+    "keywords": ["token", "url", "package"],
+
+    "homepage": "https://github.com/cotoflux/apiWork.git",
     
     "autoload": {
         "psr-4": {
