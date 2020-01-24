@@ -2,8 +2,11 @@
     "name": "cotoflux/apiWork",
     "authors": [{
         "name": "Nuria Puig",
-        "email": "cotoflux@gmail.com"
+        "email": "cotoflux@gmail.com",
+        "homepage": "https://github.com/cotoflux"
     }],
+    
+    "license": "MIT",
 
     "version": "1.0",
 
