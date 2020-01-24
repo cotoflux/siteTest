@@ -1,9 +1,9 @@
 {
-    "name":"cotoflux/apiWork",
+    "name":"cotoflux/api_work",
     "type": "library",
     "description": "Checks the login in a url and returns the tocken",
     "keywords": ["cotoflux", "token", "url", "package"],
-    "homepage": "https://github.com/cotoflux/cotoflux.github.io",
+    "homepage": "https://github.com/cotoflux",
     "license": "MIT",
 
     "authors": [{
@@ -28,12 +28,8 @@
         "psr-4": {
             "App\\":"src/"
         }
-    },
-
-    "repositories": {
-        "type": "vcs",
-        "url": "https://github.com/cotoflux/apiWork"
     }
+
 }
 
 

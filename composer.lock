@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c45d9f907a0f9a8cb7a9fe7476ddd98",
+    "content-hash": "36f3345ea306b7935da4d3bceb99e5ad",
     "packages": [
         {
             "name": "dwolla/dwolla-php",
