@@ -5,7 +5,7 @@
         "email": "cotoflux@gmail.com"
     }],
 
-    "version": "1.º.º",
+    "version": "1.0",
 
     "description": "Checks the login in a url and returns the tocken",
 
