@@ -103,11 +103,25 @@ Class SiteAPIClient
             return json_decode($response->getBody()->getContents());
         }
         catch 
-        (
-            RequestException $e){$response = $this->StatusCodeHandling($e);return $response;
+        (RequestException $e){$response = $this->StatusCodeHandling($e);return $response;
         }
         
+    }
+
+    public function sendResponse()
+
+    {
+        $responseToken=$this->prepare_access_token();
+      
+        $responseServer=$this->get_serversOK();
+
+        if($responseToken && $responseServer){
+            return "true";
+        }else{
+            return "false";
         }
+
+    }
     
 }
 

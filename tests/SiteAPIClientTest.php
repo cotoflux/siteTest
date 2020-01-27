@@ -40,5 +40,13 @@ class SiteAPIClientTest extends TestCase
         $respuestaClasseToken = $respuestaClasse->accessToken;
         $this->assertEquals($respuestaClasseToken, $respuestaServidor);
     }
+    public function test_ReturnResponseAuthorization()
+    {
+        $respuestaClasse = new SiteAPIClient();
+        $respuesta = $respuestaClasse->sendResponse();
+
+        $this->assertEquals('true', "$respuesta");
+    }
+    
 
 } 
