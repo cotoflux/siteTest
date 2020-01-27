@@ -22,8 +22,8 @@ Class SiteAPIClient
 
     public function __construct()
     {
-        $this->auth_pass = 'test1234';
-        $this->auth_email = 'test@test.test';
+        $this->auth_pass = 'PASSWWORD';
+        $this->auth_email = 'EMAIL';
         $this->client = new Client();
         $this->prepare_access_token();         
     }

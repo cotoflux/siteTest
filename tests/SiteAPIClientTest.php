@@ -13,14 +13,14 @@ class SiteAPIClientTest extends TestCase
     {   
        
         $respuestaClasse = new SiteAPIClient();
-        $this->assertEquals('test@test.test', $respuestaClasse->auth_email);
+        $this->assertEquals('EMAIL', $respuestaClasse->auth_email);
 
     }
 
     public function test_CorrectPassword()
     {
         $respuestaClasse = new SiteAPIClient();
-        $this->assertEquals('test1234', $respuestaClasse->auth_pass);
+        $this->assertEquals('PASSWORD', $respuestaClasse->auth_pass);
     }
 
     public function test_ATokenExists()
