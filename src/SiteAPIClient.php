@@ -25,8 +25,7 @@ Class SiteAPIClient
         $this->auth_pass = 'test1234';
         $this->auth_email = 'test@test.test';
         $this->client = new Client();
-        $this->prepare_access_token();
-        
+        $this->prepare_access_token();         
     }
 
 
