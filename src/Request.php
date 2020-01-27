@@ -22,13 +22,9 @@ class Request{
         $client = new Client();
 
         $res = $client->request('GET', 'https://site.electryconsulting.com', ['headers' => ['Accept' => 'application/json','Content-type' => 'application/json']]);
-            //
+            
         $status = $res->getStatusCode();
-        
-            //$array = json_decode($res, true);
-            //$myValor = $array-["reasonPharse"];
-       
-        //dump($status);
+
      
             if($status == 200){
                 return "true";

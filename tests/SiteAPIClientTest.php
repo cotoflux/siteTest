@@ -13,8 +13,6 @@ class SiteAPIClientTest extends TestCase
     {   
        
         $respuestaClasse = new SiteAPIClient();
-        //$expectedUser = 'test@test.test';
-        //dd($respuestaClasse->auth_email);
         $this->assertEquals('test@test.test', $respuestaClasse->auth_email);
 
     }
@@ -35,8 +33,6 @@ class SiteAPIClientTest extends TestCase
     {
         $respuestaClasse = new SiteAPIClient();
         $respuestaServidor = $respuestaClasse->get_serversOK();
-
-        //$respuestaClasse = new SiteAPIClient();
         $respuestaClasseToken = $respuestaClasse->accessToken;
         $this->assertEquals($respuestaClasseToken, $respuestaServidor);
     }
