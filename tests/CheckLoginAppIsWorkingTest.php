@@ -2,24 +2,24 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Request;
+use App\CheckLoginAppIsWorking;
 
 
-class RequestTest extends TestCase
+class CheckLoginAppIsWorkingTest extends TestCase
 {
 
         public function testHasUrl()
         {
 
             $this->assertInstanceOf(
-                Request::class,
-                Request::urlLogin("https://site.electryconsulting.com")
+                CheckLoginAppIsWorking::class,
+                CheckLoginAppIsWorking::urlLogin("https://site.electryconsulting.com")
             );
         }
 
         public function test_IsWorkingUrl()
         {   
-            $real = new Request();
+            $real = new CheckLoginAppIsWorking();
             $realValue = $real->urlIsWorking();
             $expectedValue = "true";
             

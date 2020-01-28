@@ -2,15 +2,13 @@
 
 <phpunit colors="true">
 
-
 <testsuites>
 
+    <testsuite name="Sheets Library Test Suite">
 
-<testsuite name="Sheets Library Test Suite">
+    <directory>./tests</directory>
 
-<directory>./tests</directory>
-
-</testsuite>
+    </testsuite>
 
 </testsuites>
 

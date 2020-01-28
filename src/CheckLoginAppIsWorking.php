@@ -6,7 +6,7 @@ namespace App;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
-class Request{
+class CheckLoginAppIsWorking{
 
     public $urlLogin = 'https://site.electryconsulting.com';
 

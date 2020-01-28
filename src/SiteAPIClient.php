@@ -20,28 +20,38 @@ Class SiteAPIClient
     
 
 
-    public function __construct()
+    public function __construct($email='',$password='',$accessToken=null)
     {
-        $this->auth_pass = 'PASSWWORD';
-        $this->auth_email = 'EMAIL';
+        $this->auth_pass = 'test1234';
+        $this->auth_email = 'test@test.test';
         $this->client = new Client();
-        $this->prepare_access_token();         
+        $this->accessToken = $this->obtain_access_token();
+        $this->check_ok_token_returns_bearerToken();  
+
     }
 
-
-    public function prepare_access_token()
+    public function obtain_access_token()
     {   try{$url = self::API_URL . '/auth/login';
             $data = ['user' => $this->auth_email,'password' => $this->auth_pass];
             $response = $this->client->post($url, ['query' => $data]);
             $result = json_decode($response->getBody()->getContents()); 
             $this->accessToken = $result->data->token;
-            $myresponse = $this->accessToken;
-            //$myresponse = $this->accessToken = $result->access_token;
-            //dump($myresponse);
-            return $myresponse;
+            $recievedToken = $this->accessToken;
+
+            return $recievedToken;
         }
         catch (RequestException $e){$response = $this->StatusCodeHandling($e);
             return $response;}
+    }
+
+    public function check_ok_token_returns_bearerToken()
+    {
+        $url = self::API_URL . '/auth/check';$option = array('exceptions' => false);
+        $header = array('Authorization'=>'Bearer ' . $this->accessToken);
+        $response = $this->client->get($url, array('headers' => $header));
+        $result = json_decode($response->getBody()->getContents());
+        $bearerToken = $result->data->token;
+        return ($bearerToken); 
 
     }
 
@@ -50,7 +60,7 @@ Class SiteAPIClient
     {
         if ($e->getResponse()->getStatusCode() == '400')
         {
-            $this->prepare_access_token();
+            $this->obtain_access_token();
         }elseif ($e->getResponse()->getStatusCode() == '422')
         {
             $response = json_decode($e->getResponse()->getBody(true)->getContents());
@@ -72,49 +82,15 @@ Class SiteAPIClient
         }
     }
 
-    Public function get_serversOK()
-    {
-        try
-        {
-            $url = self::API_URL . '/auth/check';$option = array('exceptions' => false);
-            $header = array('Authorization'=>'Bearer ' . $this->accessToken);
-            $response = $this->client->get($url, array('headers' => $header));
-            $result = json_decode($response->getBody()->getContents());
-            $resultado = $result->data->token;
-            return $resultado;
-            
 
-        }
-        catch (RequestException $e)
-        {
-            $response = $this->StatusCodeHandling($e);return $response;
-            
-        }
-    }
-
-    public function changelabel($serverid,$label)
-    {
-        try
-        {
-            $url = self::API_URL . '/server/$serverid';
-            $data = ['erver_id' => $serverid,'label' => $label];$header = array('Authorization'=>'Bearer' . $this->accessToken);
-            $response = $this->client->put($url, array('query' => $data,'headers' => $header));
-            return json_decode($response->getBody()->getContents());
-        }
-        catch 
-        (RequestException $e){$response = $this->StatusCodeHandling($e);return $response;
-        }
-        
-    }
-
-    public function sendResponse()
+    public function sendResponseToCoreApi()
 
     {
-        $responseToken=$this->prepare_access_token();
+        $responseToken=$this->obtain_access_token();
       
-        $responseServer=$this->get_serversOK();
+        $responseServer=$this->check_ok_token_returns_bearerToken();
 
-        if($responseToken && $responseServer){
+        if($responseToken === $responseServer){
             return "true";
         }else{
             return "false";
