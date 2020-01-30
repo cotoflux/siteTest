@@ -1,5 +1,7 @@
 <?php
 
+
+
 use App\MyAppsActivityLogin;
 use PHPUnit\Framework\TestCase;
 use App\SiteAPIClient;
@@ -11,20 +13,18 @@ use Symfony\Component\VarDumper;
 class MyAppsActivityLoginTest extends TestCase
 {
 
-    public function test_exected_username()
+    public function test_expected_username()
     {
         $respuestaClasse = new MyAppsActivityLogin();
         $respuesta = $respuestaClasse->get_userLoginApp();
-
-        $this->assertEquals('test@test.test', $respuesta);
+        $this->assertEquals(USER, $respuesta);
     }
 
-    public function test_exected_password()
+    public function test_expected_password()
     {
         $respuestaClasse = new MyAppsActivityLogin();
         $respuesta = $respuestaClasse->get_passwordLoginApp();
-        //dd($respuesta);
-        $this->assertEquals('test1234', $respuesta);
+        $this->assertEquals(PASSWORD, $respuesta);
     }
 
     public function test_fake_token()

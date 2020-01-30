@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App;
 
+require('./guarda/information.php');
+use App\AccesoURL;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
@@ -13,7 +15,7 @@ use Symfony\Component\VarDumper;
 Class SiteAPIClient
 {
     private $client = null;
-    const API_URL = 'https://site.electryconsulting.com/api/v1';
+    //const API_URL = 'https://site.electryconsulting.com/api/v1';
     public $auth_email;
     public $auth_pass;
     public $accessToken;
@@ -22,16 +24,23 @@ Class SiteAPIClient
 
     public function __construct($email='',$password='',$accessToken=null)
     {
-        $this->auth_pass = 'test1234';
-        $this->auth_email = 'test@test.test';
+        $this->auth_pass =PASSWORD;
+        $this->auth_email =USER;
         $this->client = new Client();
         $this->accessToken = $this->obtain_access_token();
         $this->check_ok_token_returns_bearerToken();  
 
     }
 
+    public function obtainURL()
+    {   
+        $return = new AccesoURL();
+        $mi_url = $return->API_URL_ELEC;
+        return $mi_url;
+    }
+
     public function obtain_access_token()
-    {   try{$url = self::API_URL . '/auth/login';
+    {   try{$url = $this->obtainURL() . '/auth/login';
             $data = ['user' => $this->auth_email,'password' => $this->auth_pass];
             $response = $this->client->post($url, ['query' => $data]);
             $result = json_decode($response->getBody()->getContents()); 
@@ -46,7 +55,7 @@ Class SiteAPIClient
 
     public function check_ok_token_returns_bearerToken()
     {
-        $url = self::API_URL . '/auth/check';$option = array('exceptions' => false);
+        $url = $this->obtainURL() . '/auth/check';$option = array('exceptions' => false);
         $header = array('Authorization'=>'Bearer ' . $this->accessToken);
         $response = $this->client->get($url, array('headers' => $header));
         $result = json_decode($response->getBody()->getContents());

@@ -22,8 +22,8 @@ echo(strVal($responseApi));echo '</pre>';
  $producto->get_passwordLoginApp('test1234');
 
  echo '<hr>';
- echo 'user ' . $producto->get_userLoginApp() . '<br />';
- echo 'password ' . $producto->get_passwordLoginApp() . '<br />';
+ echo 'user: ' . $producto->get_userLoginApp() . '<br />';
+ echo 'password: ' . $producto->get_passwordLoginApp() . '<br />';
  
  
 

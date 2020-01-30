@@ -3,25 +3,41 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\AccesoURL;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
+
 class CheckLoginAppIsWorking{
 
-    public $urlLogin = 'https://site.electryconsulting.com';
+    public $urlLogin;
+
+    public function asignarURL(){
+        $todasLasUrl = new AccesoURL();
+        $urlLogin = $todasLasUrl->API_URL_ELEC;
+        
+        return $urlLogin;
+    }
 
     public function urlLogin(String $urlLogin):self
     {
+
         return new self($urlLogin);
-       
+               
     }
 
     public function urlIsWorking()
     {
-        
+       
         $client = new Client();
 
-        $res = $client->request('GET', 'https://site.electryconsulting.com', ['headers' => ['Accept' => 'application/json','Content-type' => 'application/json']]);
+        $my_urlLogin = new CheckLoginAppIsWorking;
+        $todaLaURL = $my_urlLogin->asignarURL();
+        $urlHost = parse_url($todaLaURL);
+        $url_login= $urlHost['host'];
+        //dd($urlparseada_host);
+
+        $res = $client->request('GET', $url_login, ['headers' => ['Accept' => 'application/json','Content-type' => 'application/json']]);
             
         $status = $res->getStatusCode();
 
@@ -33,7 +49,6 @@ class CheckLoginAppIsWorking{
             }
 
     }
-
 
 }
 

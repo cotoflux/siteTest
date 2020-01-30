@@ -9,18 +9,25 @@ use Symfony\Component\VarDumper;
 
 class SiteAPIClientTest extends TestCase
 {
+    public function test_obtainURL_electry()
+    {
+        $respuestaClasse = new SiteAPIClient();
+        $respuesta = $respuestaClasse->obtainURL();
+        $this->assertEquals("https://site.electryconsulting.com/api/v1", $respuesta);
+    }
+
     public function test_CorrectUser()
     {   
        
         $respuestaClasse = new SiteAPIClient();
-        $this->assertEquals('test@test.test', $respuestaClasse->auth_email);
+        $this->assertEquals(USER, $respuestaClasse->auth_email);
 
     }
 
     public function test_CorrectPassword()
     {
         $respuestaClasse = new SiteAPIClient();
-        $this->assertEquals('test1234', $respuestaClasse->auth_pass);
+        $this->assertEquals(PASSWORD, $respuestaClasse->auth_pass);
     }
 
     public function test_ATokenExists()

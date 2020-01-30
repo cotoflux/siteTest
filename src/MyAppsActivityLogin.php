@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App;
 
+
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
@@ -14,8 +16,9 @@ Class MyAppsActivityLogin
   
     public function __construct()
     {
-        $this->myPassword='test1234';
-        $this->myUser="test@test.test";
+        $this->myPassword=PASSWORD;
+        $this->myUser=USER;
+        $this->token= $this->get_tokenLoginApp();
 
     }
 
@@ -27,7 +30,7 @@ Class MyAppsActivityLogin
     }
 
     public function get_tokenLoginApp(){
-        $token = new TokenGeneratorMyApp();
+        $token = new MyAppTokenGenerator();
         return $token;
     }
 

@@ -10,7 +10,7 @@ use Symfony\Component\VarDumper;
 
 
 
-Class TokenGeneratorMyApp
+Class MyAppTokenGenerator
 {
 
     public $token;
