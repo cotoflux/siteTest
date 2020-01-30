@@ -5,10 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -21,3 +18,5 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
+
+
