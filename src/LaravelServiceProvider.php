@@ -16,7 +16,7 @@ class LaravelServiceProvider extends ServiceProvider
         * Publish the sips.php config file
         */
         $this->publishes([
-            __DIR__ . 'LaravelServiceProvider.php' => config_path('LaravelServiceProvider.php'),
+            __DIR__ . '/config/apiwork.php' => config_path('apiwork.php'),
         ]);
     }
 }
