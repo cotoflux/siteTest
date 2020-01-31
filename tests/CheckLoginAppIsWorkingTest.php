@@ -1,9 +1,9 @@
 
 <?php
 
-use App\AccesoURL;
+use cotoflux\api_work\AccesoURL;
 use PHPUnit\Framework\TestCase;
-use App\CheckLoginAppIsWorking;
+use cotoflux\api_work\CheckLoginAppIsWorking;
 
 
 class CheckLoginAppIsWorkingTest extends TestCase

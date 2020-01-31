@@ -2,9 +2,9 @@
 
 
 
-use App\MyAppsActivityLogin;
+use cotoflux\api_work\MyAppsActivityLogin;
 use PHPUnit\Framework\TestCase;
-use App\SiteAPIClient;
+use cotoflux\api_work\SiteAPIClient;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
@@ -17,14 +17,14 @@ class MyAppsActivityLoginTest extends TestCase
     {
         $respuestaClasse = new MyAppsActivityLogin();
         $respuesta = $respuestaClasse->get_userLoginApp();
-        $this->assertEquals(USER, $respuesta);
+        $this->assertEquals(MYUSER, $respuesta);
     }
 
     public function test_expected_password()
     {
         $respuestaClasse = new MyAppsActivityLogin();
         $respuesta = $respuestaClasse->get_passwordLoginApp();
-        $this->assertEquals(PASSWORD, $respuesta);
+        $this->assertEquals(MYPASSWORD, $respuesta);
     }
 
     public function test_fake_token()

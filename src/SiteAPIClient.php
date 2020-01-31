@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace cotoflux\api_work;
 
 require('./guarda/information.php');
-use App\AccesoURL;
+use cotoflux\api_work\AccesoURL;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;

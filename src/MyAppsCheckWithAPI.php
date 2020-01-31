@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace cotoflux\api_work;
 
-use App\MyAppsActivityLogin;
-use App\SiteAPIClient;
+use cotoflux\api_work\MyAppsActivityLogin;
+use cotoflux\api_work\SiteAPIClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;

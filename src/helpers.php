@@ -1,5 +1,8 @@
 <?php
-use App\SipsProvider;
+
+//namespace cotoflux\api_work;
+
+//use App\SipsProvider;
 
 if (!function_exists('register_fn')) {
     function register_fn($fn_name, $fn)
@@ -50,6 +53,6 @@ if (!function_exists('furSips')) {
         if(is_null($config) && defined('config')){
             $config = config('apiwork');
         }
-        return new SipsProvider($cups, $config, $logChannel);
+        //return new SipsProvider($cups, $config, $logChannel);
     }
 }

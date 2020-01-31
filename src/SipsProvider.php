@@ -1,6 +1,6 @@
 <?php
 
-namespace Furbyus\Sips;
+//namespace Cotoflux\api_work;
 
 use Furbyus\Sips\Interfaces\iSipsProvider;
 use Furbyus\Sips\Lib\AES;
@@ -20,7 +20,7 @@ class SipsProvider implements iSipsProvider
      */
 
     public $cups;
-    /*
+    /*s
      * @property array $sipsConfig <p>Configuraciones para los Proveedores disponibles y habilitados ej: accessKey </p>
      */
     public $sipsConfig;

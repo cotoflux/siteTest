@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\MyAppTokenGenerator;
+use cotoflux\api_work\MyAppTokenGenerator;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 

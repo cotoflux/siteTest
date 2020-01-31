@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace cotoflux\api_work;
 
-
+require('./guarda/myinformation.php');
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -16,13 +16,14 @@ Class MyAppsActivityLogin
   
     public function __construct()
     {
-        $this->myPassword=PASSWORD;
-        $this->myUser=USER;
+        $this->myPassword=MYPASSWORD;
+        $this->myUser=MYUSER;
         $this->token= $this->get_tokenLoginApp();
 
     }
 
     public function get_userLoginApp(){
+        
         return $this->myUser;
     }
     public function get_passwordLoginApp(){
