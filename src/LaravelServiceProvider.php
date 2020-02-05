@@ -20,9 +20,9 @@ class LaravelServiceProvider extends ServiceProvider
         * Publish the all thecommands to use when installed
         */
         $this->publishes([
-            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('Console/Commands/TestAllTrue.php'),
-            __DIR__ . '/app/Console/Commands/TestConfig.php' => app_path('Console/Commands/TestConfig.php'),
-            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('Console/Commands/TestLoginValidToken.php'),
+            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_Console_Commands_path('/TestAllTrue.php'),
+            __DIR__ . '/app/Console/Commands/TestConfig.php' => app_Console_Commands_path('/TestConfig.php'),
+            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_Console_Commands_path('/TestLoginValidToken.php'),
         ]);
 
     }
