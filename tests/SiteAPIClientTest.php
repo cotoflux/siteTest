@@ -13,7 +13,7 @@ class SiteAPIClientTest extends TestCase
     {
         $respuestaClasse = new SiteAPIClient();
         $respuesta = $respuestaClasse->obtainURL();
-        $this->assertEquals("https://site.electryconsulting.com/api/v1", $respuesta);
+        $this->assertEquals("APIURL", $respuesta);
     }
 
     public function test_CorrectUser()

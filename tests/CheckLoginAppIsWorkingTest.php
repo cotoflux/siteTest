@@ -28,7 +28,7 @@ class CheckLoginAppIsWorkingTest extends TestCase
 
             $this->assertInstanceOf(
                 CheckLoginAppIsWorking::class,
-                CheckLoginAppIsWorking::urlLogin("https://site.electryconsulting.com")
+                CheckLoginAppIsWorking::urlLogin("APIURL")
             );
         }
 
