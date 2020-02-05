@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace cotoflux\siteTest;
+namespace cotoflux\site_test;
 
 
 use GuzzleHttp\Client;

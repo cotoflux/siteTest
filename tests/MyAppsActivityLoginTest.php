@@ -1,7 +1,7 @@
 <?php
 
 
-use cotoflux\siteTest\MyAppsActivityLogin;
+use cotoflux\site_test\MyAppsActivityLogin;
 use PHPUnit\Framework\TestCase;
 use cotoflux\api_work\SiteAPIClient;
 use GuzzleHttp\Client;

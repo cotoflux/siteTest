@@ -1,5 +1,5 @@
 {
-    "name":"cotoflux/siteTest",
+    "name":"cotoflux/site_test",
     "type": "library",
     "description": "Checks the login in a url and returns the token",
     "keywords": ["cotoflux", "token", "url", "package"],
@@ -29,7 +29,7 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "cotoflux\\siteTest\\":"src/"
+            "cotoflux\\site_test\\":"src/"
         }
     },
 
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "cotoflux\\siteTest\\LaravelServiceProvider"
+                "cotoflux\\site_test\\LaravelServiceProvider"
             ]
             
         }, 

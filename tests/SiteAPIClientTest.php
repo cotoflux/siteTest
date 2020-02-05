@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use cotoflux\siteTest\SiteAPIClient;
+use cotoflux\site_test\SiteAPIClient;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
