@@ -1,4 +1,4 @@
-#PACKAGE CHECKING AUTENTIFICATION#
+# PACKAGE CHECKING AUTENTIFICATION #
 
 Create a Laravel project.
 
@@ -16,7 +16,7 @@ When all done, to be able to run the commands you need to run:
 
 php artisan vendor:publish
 
-##If you do modifications and is not working properly check is not stuck in the cache#:
+## If you do modifications and is not working properly check is not stuck in the cache ##:
 
     1. composer remove cotoflux/site_test
     2. composer dumpautoload
