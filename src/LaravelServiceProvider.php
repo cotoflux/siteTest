@@ -21,9 +21,22 @@ class LaravelServiceProvider extends ServiceProvider
         */
         $this->publishes([
             __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('/Console/Commands/TestAllTrue.php'),
-            __DIR__ . '/app/Console/Commands/TestConfig.php' => app_path('/Console/Commands/TestConfig.php'),
-            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('/Console/Commands/TestLoginValidToken.php'),
+
         ]);
+
+        $this->publishes([
+            __DIR__ . '/app/Console/Commands/TestConfig.php' => app_path('/Console/Commands/TestConfig.php'),
+
+        ]);
+
+        
+        $this->publishes([
+            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('/Console/Commands/TestLoginValidToken.php'),
+
+        ]);
+
+
+
 
     }
 }
