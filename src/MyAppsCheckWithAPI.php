@@ -5,9 +5,6 @@ namespace cotoflux\site_test;
 
 use cotoflux\site_test\MyAppsActivityLogin;
 use cotoflux\site_test\SiteAPIClient;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use Guzzle\Http\Exception\ClientErrorResponseException;
 use Symfony\Component\VarDumper;
 
 

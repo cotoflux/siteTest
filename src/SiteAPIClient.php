@@ -9,7 +9,6 @@ use cotoflux\site_test\AccesoPassword;
 use cotoflux\site_test\AccesoUser;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
-use Guzzle\Http\Exception\ClientErrorResponseException;
 use Symfony\Component\VarDumper;
 
 
@@ -56,7 +55,6 @@ Class SiteAPIClient
     public function obtain_access_token()
     {   try{$url = $this->obtainURL() . '/auth/login';
             $data = ['user' => $this->auth_email,'password' => $this->auth_pass];                       
-            //dd($data);
             $response = $this->client->post($url, ['query' => $data]);
             $result = json_decode($response->getBody()->getContents()); 
             $this->accessToken = $result->data->token;

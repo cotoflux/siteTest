@@ -3,8 +3,6 @@
 
 use cotoflux\site_test\MyAppsActivityLogin;
 use PHPUnit\Framework\TestCase;
-use cotoflux\api_work\SiteAPIClient;
-use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 
 

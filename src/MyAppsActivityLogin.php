@@ -5,9 +5,6 @@ namespace cotoflux\site_test;
 
 use cotoflux\site_test\AccesoUser;
 use cotoflux\site_test\AccesoPassword;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use Guzzle\Http\Exception\ClientErrorResponseException;
 use Symfony\Component\VarDumper;
 
 Class MyAppsActivityLogin

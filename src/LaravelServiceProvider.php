@@ -2,7 +2,7 @@
 namespace cotoflux\site_test;
 
 use Illuminate\Support\ServiceProvider;
-use GuzzleHttp\Client;
+
 
 class LaravelServiceProvider extends ServiceProvider
 {
