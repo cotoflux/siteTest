@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace cotoflux\api_work;
 
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
@@ -19,7 +20,5 @@ Class MyAppTokenGenerator
         $this->token = bin2hex(random_bytes(64));
       
     }
-
-    
 
 }

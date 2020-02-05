@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace cotoflux\api_work;
 
-require('./guarda/information.php');
+
 use cotoflux\api_work\AccesoURL;
+use cotoflux\api_work\AccesoPassword;
+use cotoflux\api_work\AccesoUser;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
@@ -24,8 +26,8 @@ Class SiteAPIClient
 
     public function __construct($email='',$password='',$accessToken=null)
     {
-        $this->auth_pass =PASSWORD;
-        $this->auth_email =USER;
+        $this->auth_pass = $this->obtainPassword();
+        $this->auth_email = $this->obtainUser();
         $this->client = new Client();
         $this->accessToken = $this->obtain_access_token();
         $this->check_ok_token_returns_bearerToken();  
@@ -39,9 +41,23 @@ Class SiteAPIClient
         return $mi_url;
     }
 
+    public function obtainUser()
+    {
+        $return = new AccesoUser();
+        $mi_user = $return->API_USER_ELEC;
+        return $mi_user;
+    }
+
+    public function obtainPassword()
+    {
+        $return = new AccesoPassword();
+        $mi_password = $return->API_PASSWORD_ELEC;
+        return $mi_password;
+    }
     public function obtain_access_token()
     {   try{$url = $this->obtainURL() . '/auth/login';
-            $data = ['user' => $this->auth_email,'password' => $this->auth_pass];
+            $data = ['user' => $this->auth_email,'password' => $this->auth_pass];                       
+            //dd($data);
             $response = $this->client->post($url, ['query' => $data]);
             $result = json_decode($response->getBody()->getContents()); 
             $this->accessToken = $result->data->token;
@@ -54,8 +70,8 @@ Class SiteAPIClient
     }
 
     public function check_ok_token_returns_bearerToken()
-    {
-        $url = $this->obtainURL() . '/auth/check';$option = array('exceptions' => false);
+    {   
+        $url = $this->obtainURL().'/auth/check';$option = array('exceptions' => false);
         $header = array('Authorization'=>'Bearer ' . $this->accessToken);
         $response = $this->client->get($url, array('headers' => $header));
         $result = json_decode($response->getBody()->getContents());
@@ -67,6 +83,7 @@ Class SiteAPIClient
     
     public function StatusCodeHandling($e)
     {
+
         if ($e->getResponse()->getStatusCode() == '400')
         {
             $this->obtain_access_token();
@@ -108,4 +125,5 @@ Class SiteAPIClient
     }
     
 }
+
 

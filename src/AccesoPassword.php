@@ -10,18 +10,18 @@ use Symfony\Component\VarDumper;
 
 
 
-Class AccesoURL
+Class AccesoPassword
 {
-    public $API_URL_ELEC; 
+    public $API_PASSWORD_ELEC; 
 
 
     public function __construct()
     {
-        $this->API_URL_ELEC = config('apiwork.Site.endpoint');
+        
+
+       $this->API_PASSWORD_ELEC = config('apiwork.Site.secret');
+
 
     }
 
-
 }
-
-
