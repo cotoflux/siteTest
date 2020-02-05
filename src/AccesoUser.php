@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace cotoflux\api_work;
+namespace cotoflux\siteTest;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;

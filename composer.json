@@ -1,9 +1,9 @@
 {
-    "name":"cotoflux/api_work",
+    "name":"cotoflux/siteTest",
     "type": "library",
     "description": "Checks the login in a url and returns the token",
     "keywords": ["cotoflux", "token", "url", "package"],
-    "homepage": "https://github.com/cotoflux/api_work",
+    "homepage": "https://github.com/cotoflux/siteTest",
     "license": "MIT",
 
     "authors": [{
@@ -29,7 +29,7 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "cotoflux\\api_work\\":"src/"
+            "cotoflux\\siteTest\\":"src/"
         }
     },
 
@@ -40,12 +40,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "cotoflux\\api_work\\LaravelServiceProvider"
+                "cotoflux\\siteTest\\LaravelServiceProvider"
             ]
             
         }, 
         "branch-alias": {
-            "dev-master": "1.0.3.1-dev"
+            "dev-master": "1.0-dev"
         }
         
     }

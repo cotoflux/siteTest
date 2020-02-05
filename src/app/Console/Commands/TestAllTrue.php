@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-Use cotoflux\api_work\MyAppsCheckWithAPI;
+Use cotoflux\siteTest\MyAppsCheckWithAPI;
 
 class TestAllTrue extends Command
 {

@@ -1,5 +1,5 @@
 <?php
-namespace cotoflux\api_work;
+namespace cotoflux\siteTest;
 
 use Illuminate\Support\ServiceProvider;
 use GuzzleHttp\Client;

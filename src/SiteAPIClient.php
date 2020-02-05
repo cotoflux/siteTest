@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace cotoflux\api_work;
+namespace cotoflux\siteTest;
 
 
-use cotoflux\api_work\AccesoURL;
-use cotoflux\api_work\AccesoPassword;
-use cotoflux\api_work\AccesoUser;
+use cotoflux\siteTest\AccesoURL;
+use cotoflux\siteTest\AccesoPassword;
+use cotoflux\siteTest\AccesoUser;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Guzzle\Http\Exception\ClientErrorResponseException;

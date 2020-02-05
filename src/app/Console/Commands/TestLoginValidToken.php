@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-Use cotoflux\api_work\SiteAPIClient;
+Use cotoflux\siteTest\SiteAPIClient;
 
 class TestLoginValidToken extends Command
 {

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace cotoflux\api_work;
+namespace cotoflux\siteTest;
 
-use cotoflux\api_work\AccesoURL;
+use cotoflux\siteTest\AccesoURL;
 use GuzzleHttp\Client;
 use Symfony\Component\VarDumper;
 

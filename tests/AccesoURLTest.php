@@ -1,8 +1,7 @@
 <?php
 
 
-use cotoflux\api_work\AccesoURL;
-
+use cotoflux\siteTest\AccesoURL;
 use PHPUnit\Framework\TestCase;
 use Cotoflux\api_work\CheckLoginAppIsWorking;
 

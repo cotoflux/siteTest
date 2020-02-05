@@ -1,9 +1,6 @@
 <?php
 
-
-
-
-use cotoflux\api_work\MyAppsCheckWithAPI;
+use cotoflux\siteTest\MyAppsCheckWithAPI;
 use PHPUnit\Framework\TestCase;
 
 use GuzzleHttp\Client;
