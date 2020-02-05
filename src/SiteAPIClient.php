@@ -17,7 +17,6 @@ use Symfony\Component\VarDumper;
 Class SiteAPIClient
 {
     private $client = null;
-    //const API_URL = 'https://site.electryconsulting.com/api/v1';
     public $auth_email;
     public $auth_pass;
     public $accessToken;

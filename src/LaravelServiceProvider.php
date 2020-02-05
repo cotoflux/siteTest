@@ -7,29 +7,23 @@ use GuzzleHttp\Client;
 class LaravelServiceProvider extends ServiceProvider
 {
 
-/*     
-    public function register()
-    {
-        $baseUrl = env('APIWORK_SITE_ENDPOINT');
 
-        $this->app->singleton('GuzzleHttp\Client', function($api) use ($baseUrl) {
-            return new Client([
-                'base_uri' => $baseUrl,
-            ]);
-        });
-    } */
-    /**
-     * Bootstrap application services.
-     *<
-     * @return void
-     */
     public function boot()
     {
         /*
-        * Publish the sips.php config file
+        * Publish the apiwork.php config file
         */
         $this->publishes([
             __DIR__ . '/config/apiwork.php' => config_path('apiwork.php'),
         ]);
+        /*
+        * Publish the all thecommands to use when installed
+        */
+        $this->publishes([
+            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => config_path('TestAllTrue.php'),
+            __DIR__ . '/app/Console/Commands/TestConfig.php' => config_path('TestConfig.php'),
+            __DIR__ . '/app/Console/Commands/TestAllTrue.php' => config_path('TestAllTrue.php'),
+        ]);
+
     }
 }
