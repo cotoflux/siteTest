@@ -26,6 +26,12 @@ class LaravelServiceProvider extends ServiceProvider
 
             __DIR__ . '/app/Console/Commands/TestLoginValidToken.php' => app_path('\Console\Commands\TestLoginValidToken.php'),
 
+            __DIR__ . '/app/Console/Commands/TestHdllToken.php' => app_path('\Console\Commands\TestHdllToken.php'),
+
+            __DIR__ . '/app/Console/Commands/TestKeyPassword.php' => app_path('\Console\Commands\TestKeyPassword.php'),
+
+            __DIR__ . '/app/Console/Commands/TestKeyUser.php' => app_path('\Console\Commands\TestKeyUser.php'),
+
         ]);
 
 
