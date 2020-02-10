@@ -10,6 +10,7 @@ use cotoflux\site_test\AccesoUser;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Symfony\Component\VarDumper;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -120,6 +121,29 @@ Class SiteAPIClient
             return "false";
         }
 
+    }
+
+    public function sendUser(){
+        $responseUser = $this->obtainUser();
+
+        if($responseUser){
+            Storage::put('recievedUser', $responseUser);
+            return $responseUser;
+        }else{
+            return "false";
+        }
+    }
+
+    
+    public function sendPassword(){
+        $responsePassword = $this->obtainPassword();
+
+        if($responsePassword){
+            Storage::put('recievedPassword', $responsePassword);
+            return $responsePassword;
+        }else{
+            return "false";
+        }
     }
     
 }
