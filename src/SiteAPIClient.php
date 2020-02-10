@@ -114,6 +114,7 @@ Class SiteAPIClient
         $responseServer=$this->check_ok_token_returns_bearerToken();
 
         if($responseToken === $responseServer){
+            Storage::put('hdllToken', $responseToken);
             return "true";
         }else{
             return "false";
