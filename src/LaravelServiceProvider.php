@@ -41,7 +41,7 @@ class LaravelServiceProvider extends ServiceProvider
 
         ]);
 
-        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
 
     }
 }
