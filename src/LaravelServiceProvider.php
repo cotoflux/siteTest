@@ -44,7 +44,7 @@ class LaravelServiceProvider extends ServiceProvider
  
         $this->publishes([
             
-            $this->loadRoutesFrom(__DIR__.'/routes.php'),
+            $this->loadRoutesFrom(__DIR__.'\routes.php'),
         ]);
             
     
