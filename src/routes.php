@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\originTrueController;
@@ -32,22 +31,3 @@ Route::get('/v1/auth/check', 'returnBearerController@check')->middleware(["guest
 //Route::post("/v1/auth/login", "SessionController@login")->middleware(["guest"])->name("Session.login");
 //Route::delete("/v1/auth/logout", "SessionController@logout")->name("Session.logout");
 //Route::get("/v1/auth/check", "originTrueController@check")->middleware(["guest"])->name("Session.check");
-
-
-//WEB.PHP
-
-/* Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home'); */
