@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 
-class originTrueController extends Controller
+class originKeyController extends Controller
 {
 
 
