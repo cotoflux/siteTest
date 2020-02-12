@@ -27,7 +27,8 @@ class originKeyController extends BaseController
 
     public function userresponse(){
 
-        $response = Storage::get('recievedUser');
+        $sendResponse = new SiteAPIClient();
+        $response = $sendResponse->obtainUser();
  
         if($response){
             return $response;
@@ -39,7 +40,8 @@ class originKeyController extends BaseController
 
     public function passwordresponse(){
 
-        $response = Storage::get('recievedPassword');
+        $sendResponse = new SiteAPIClient();
+        $response = $sendResponse->obtainPassword();
 
         if($response){
             return $response;

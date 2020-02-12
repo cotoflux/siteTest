@@ -19,7 +19,7 @@ class LaravelServiceProvider extends ServiceProvider
         /*
         * Publish the all thecommands to use when installed
         */
-        $this->publishes([
+/*         $this->publishes([
             __DIR__ . '/app/Console/Commands/TestAllTrue.php' => app_path('\Console\Commands\TestAllTrue.php'),
 
             __DIR__ . '/app/Console/Commands/TestConfig.php' => app_path('\Console\Commands\TestConfig.php'),
@@ -32,7 +32,7 @@ class LaravelServiceProvider extends ServiceProvider
 
             __DIR__ . '/app/Console/Commands/TestKeyUser.php' => app_path('\Console\Commands\TestKeyUser.php'),
 
-        ]);
+        ]); */
 
         $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
 
