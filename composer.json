@@ -24,9 +24,6 @@
     },
 
     "autoload": {
-        "files": [
-            "src/helpers.php"
-        ],
         "psr-4": {
             "cotoflux\\site_test\\":"src/"
         }
