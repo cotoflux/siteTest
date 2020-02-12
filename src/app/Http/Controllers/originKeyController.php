@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace cotoflux\site_test\Controllers;
 
 use cotoflux\site_test\SiteAPIClient;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Controller as BaseController;
 
-
-class originKeyController extends Controller
+class originKeyController extends BaseController
 {
 
 
-    public function keyresponse(){
-
+    public function keyresponse()
+    {
         $sendResponse = new SiteAPIClient();
         $response = $sendResponse->sendResponseToCoreApi();
 
@@ -46,13 +46,5 @@ class originKeyController extends Controller
         }else{
             return "false";
         }
-
     }
-
-    protected function loadRoutesFrom($path)
-    {
-        if (! $this->app->routesAreCached()) {
-            require $path;
-        }
-    }    
 }

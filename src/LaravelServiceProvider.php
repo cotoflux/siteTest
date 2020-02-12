@@ -1,7 +1,6 @@
 <?php
 namespace cotoflux\site_test;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 
@@ -35,14 +34,7 @@ class LaravelServiceProvider extends ServiceProvider
 
         ]);
 
-        $this->publishes([
-            __DIR__ . '/app/Http/Controllers/originKeyController.php' => app_path('\Http\Controllers\originKeyController.php'),
-
-            __DIR__ . '/app/Http/Controllers/returnBearerController.php' => app_path('\Http\Controllers\returnBearerController.php'),
-
-        ]);
-
-        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
 
     }
 }
