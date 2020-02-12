@@ -2,6 +2,7 @@
 namespace cotoflux\site_test;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 
 class LaravelServiceProvider extends ServiceProvider
@@ -41,7 +42,7 @@ class LaravelServiceProvider extends ServiceProvider
 
         ]);
 
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
     }
 }

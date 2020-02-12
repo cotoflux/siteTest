@@ -1,5 +1,5 @@
 <?php
-
+        
 
 use Illuminate\Http\Request;
 
@@ -18,12 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+/* 
 Route::get('/v1/auth/keyresponse', 'originKeyControllerr@keyresponse')->middleware(["guest"])->name("Session.origin.key");
 //La ruta como debería ser a la espera de configuración de Carlos:
 //Route::post('/v1/auth/keyresponse', 'originTrueController@keyresponse')->middleware(["guest"])->name("Session.origin");
 Route::get('/v1/auth/userresponse', 'originKeyController@userresponse')->middleware(["guest"])->name("Session.origin.user");
-Route::get('/v1/auth/passwordresponse', 'originKeyController@passwordresponse')->middleware(["guest"])->name("Session.origin.pass");
+Route::get('/v1/auth/passwordresponse', 'originKeyController@passwordresponse')->middleware(["guest"])->name("Session.origin.pass"); */
 
 Route::get('/v1/auth/check', 'returnBearerController@check')->middleware(["guest"])->name("Session.check");
 

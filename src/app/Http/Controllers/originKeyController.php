@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use cotoflux\site_test\SiteAPIClient;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\ServiceProvider;
 
 
 class originKeyController extends Controller
@@ -48,4 +49,10 @@ class originKeyController extends Controller
 
     }
 
+    protected function loadRoutesFrom($path)
+    {
+        if (! $this->app->routesAreCached()) {
+            require $path;
+        }
+    }    
 }
