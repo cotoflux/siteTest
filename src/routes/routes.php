@@ -37,3 +37,9 @@ Route::get('/v1/auth/passwordresponse', function (originKeyController $okc) {
 Route::get('/v1/auth/check', function (returnBearerController $rbc) {
     return $rbc->check();
 })->middleware(["guest"])->name("Session.check");
+
+//Carlos
+Route::get('/v1/auth/logincheck', function (loginCheckController $lcc) {
+    return $lcc->logincheck();
+})->middleware(["guest"])->name("Session.logincheck");
+
